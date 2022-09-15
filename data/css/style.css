@@ -1,0 +1,1312 @@
+/*
+        espMCU style.css mk'L' -- Main Application Custom JavaScript Library
+                                ***  '' ./css/style.css ''
+                                  
+*/
+
+
+
+
+/*=================================================================================================*/
+/*=================================================================================================*/
+
+/*------------------------------------------------
+           * Positioning And Alignment *
+-------------------------------------------------*/
+/* Utility Container */
+.contain,
+.wrap {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  /* for edge cases: */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Utility Centering */
+.gentle-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1ch;
+}
+
+.grid-center {
+  display: grid;
+  place-content: center;
+  gap: 1ch;
+}
+
+.cntrX,
+.center-x,
+.fluffy-center {
+  padding: 2ch;
+}
+
+.cntrY,
+.center-y {
+  vertical-align: middle;
+}
+
+.centergrid-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.centergrid-child {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+
+/*------------------------------------------------
+  * Scale Objects (Faithfully Maintains Existing Appearance) *
+-------------------------------------------------*/
+.scale-150x,
+scale-doubble {
+  transform: scale3d(1.5, 1.5, 1.5);
+  transform-style: preserve-3d;
+}
+.scale-2x,
+scale-doubble {
+  transform: scale3d(2, 2, 2);
+  transform-style: preserve-3d;
+}
+.scale-3x {
+  transform: scale3d(3, 3, 3);
+  transform-style: preserve-3d;
+}
+.scale-half {
+  transform: scale3d(0.5, 0.5, 0.5);
+  transform-style: preserve-3d;
+}
+.scale-quarter {
+  transform: scale3d(0.25, 0.25, 0.25);
+  transform-style: preserve-3d;
+}
+
+.scale-10pct,
+.scale10 {
+  transform: scale3d(0.1, 0.1, 0.1);
+  transform-style: preserve-3d;
+}
+.scale-20pct,
+.scale20 {
+  transform: scale3d(0.2, 0.2, 0.2);
+  transform-style: preserve-3d;
+}
+.scale-30pct,
+.scale30 {
+  transform: scale3d(0.3, 0.3, 0.3);
+  transform-style: preserve-3d;
+}
+.scale-40pct,
+.scale40 {
+  transform: scale3d(0.4, 0.4, 0.4);
+  transform-style: preserve-3d;
+}
+.scale-50pct,
+.scale50 {
+  transform: scale3d(0.5, 0.5, 0.5);
+  transform-style: preserve-3d;
+}
+.scale-60pct,
+.scale60 {
+  transform: scale3d(0.6, 0.6, 0.6);
+  transform-style: preserve-3d;
+}
+.scale-70pct,
+.scale70 {
+  transform: scale3d(0.7, 0.7, 0.7);
+  transform-style: preserve-3d;
+}
+.scale-80pct,
+.scale80 {
+  transform: scale3d(0.8, 0.8, 0.8);
+  transform-style: preserve-3d;
+}
+.scale-90pct,
+.scale90 {
+  transform: scale3d(0.9, 0.9, 0.9);
+  transform-style: preserve-3d;
+}
+
+/*------------------------------------------------
+                 * Rotation *
+-------------------------------------------------*/
+.rotate-22pt5cw {
+  transform: rotate(22.5deg);
+}
+.rotate-45pt5cw {
+  transform: rotate(22.5deg);
+}
+.rotate-90cw {
+  transform: rotate(90deg);
+}
+.rotate-180cw {
+  transform: rotate(180deg);
+}
+.rotate-270cw {
+  transform: rotate(270deg);
+}
+
+/* BassCSS Align */
+.align-baseline {
+  vertical-align: baseline;
+}
+.align-top {
+  vertical-align: top;
+}
+.align-middle {
+  vertical-align: middle;
+}
+.align-bottom {
+  vertical-align: bottom;
+}
+
+/* BassCSS Layout */
+.inline {
+  display: inline;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.table {
+  display: table;
+}
+.table-cell {
+  display: table-cell;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+.overflow-auto {
+  overflow: auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.fit {
+  max-width: 100%;
+}
+
+.max-width-1 {
+  max-width: var(--width-1);
+}
+.max-width-2 {
+  max-width: var(--width-2);
+}
+.max-width-3 {
+  max-width: var(--width-3);
+}
+.max-width-4 {
+  max-width: var(--width-4);
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+:root {
+  --width-1: 24rem;
+  --width-2: 32rem;
+  --width-3: 48rem;
+  --width-4: 64rem;
+}
+
+/* BassCSS Position */
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+
+.top-0 {
+  top: 0;
+}
+.right-0 {
+  right: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.left-0 {
+  left: 0;
+}
+
+.z1 {
+  z-index: var(--z1);
+}
+.z2 {
+  z-index: var(--z2);
+}
+.z3 {
+  z-index: var(--z3);
+}
+.z4 {
+  z-index: var(--z4);
+}
+
+:root {
+  --z1: 1;
+  --z2: 2;
+  --z3: 3;
+  --z4: 4;
+}
+
+/* BassCSS Typography */
+
+.font-family-inherit {
+  font-family: inherit;
+}
+.font-size-inherit {
+  font-size: inherit;
+}
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: var(--bold-font-weight, bold);
+}
+.regular {
+  font-weight: normal;
+}
+.italic {
+  font-style: italic;
+}
+.caps {
+  text-transform: uppercase;
+  letter-spacing: var(--caps-letter-spacing);
+}
+
+.left-align {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right-align {
+  text-align: right;
+}
+.justify {
+  text-align: justify;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+.break-word {
+  word-wrap: break-word;
+}
+
+.line-height-1 {
+  line-height: var(--line-height-1);
+}
+.line-height-2 {
+  line-height: var(--line-height-2);
+}
+.line-height-3 {
+  line-height: var(--line-height-3);
+}
+.line-height-4 {
+  line-height: var(--line-height-4);
+}
+
+.list-style-none {
+  list-style: none;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+:root {
+  --line-height-1: 1;
+  --line-height-2: 1.125;
+  --line-height-3: 1.25;
+  --line-height-4: 1.5;
+  --caps-letter-spacing: 0.2em;
+  --bold-font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  text-align: center;
+}
+h1 {
+  font-size: 1.8rem;
+  color: white;
+}
+p {
+  font-size: 1.4rem;
+}
+body {
+  margin: 0;
+      background: radial-gradient(black 40%, transparent 0) 0 0,
+    radial-gradient(black 40%, transparent 0) 20px 20px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 40%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 40%, transparent 20%) 20px 21px;
+  background-color: #282828;
+  background-size: 40px 40px;
+  background-clip: content-box;
+
+}
+
+/* Style for navigation bar */
+
+/* Add a background color to the top navigation */
+.topnav {
+  overflow: hidden;
+  background-color: #1b1e24;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #1b1e24;
+  color: white;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.topnav-right{
+  float:right;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one. */
+@media screen and (max-width: 600px) {
+  .topnav-right a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a, .topnav.responsive .topnav-right {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+/* Styles for content */
+.content {
+  padding: 5%;
+}
+.card-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card {
+   background: rgba(0,0,0,0.25);
+   box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.chart-container {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.state {
+  font-size: 1.2rem;
+  color:#ffffff;
+}
+
+
+
+input[type="checkbox"] {
+  margin: 10px;
+  position: relative;
+  width: 120px;
+  height: 40px;
+  -webkit-appearance: none;
+  background: linear-gradient(0deg, #333, #000);
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+input:checked[type="checkbox"]:nth-of-type(1) {
+  background: linear-gradient(0deg, #7f00ff, #e100ff);
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+input:checked[type="checkbox"]:nth-of-type(2) {
+  background: linear-gradient(0deg, #1488cc, #2b32b2);
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+input:checked[type="checkbox"]:nth-of-type(3) {
+  background: linear-gradient(0deg, #f8ff00, #3ad59f);
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+input:checked[type="checkbox"]:nth-of-type(4) {
+  background: linear-gradient(0deg, #f12711, #f5af19);
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(0deg, #000, #6b6b6b);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(0.98, 0.96);
+  transition: 0.5s;
+}
+
+input:checked[type="checkbox"]:before {
+  left: 40px;
+}
+
+input[type="checkbox"]:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 70px;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(0deg, #6b6b6b, #000);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+input:checked[type="checkbox"]:after {
+  left: 110px;
+}
+
+.togglesw1 input:checked[type="checkbox"] {
+  background: linear-gradient(0deg, #7f00ff, #e100ff);
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.togglesw2 input:checked[type="checkbox"] {
+  background: linear-gradient(0deg, #1488cc, #2b32b2);
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.togglesw3 input:checked[type="checkbox"] {
+  background: linear-gradient(0deg, #f8ff00, #3ad59f);
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.togglesw4 input:checked[type="checkbox"] {
+  background: linear-gradient(0deg, #f12711, #f5af19);
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+
+
+
+.table {
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: auto;
+  text-align: left;
+  /*Font Size + Line Height*/
+  font: 12px/25px "Lucida Grande", Verdana, Arial, sans-serif;
+  color: #dfdfdf;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.8);
+  background: #333;
+  border-collapse: separate;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.table-head > tr > th {
+  width: auto;
+  padding: 0 11px;
+  font-weight: bold;
+  background: #3d4147;
+  background-clip: padding-box;
+  border: 1px solid #111;
+  border-left-width: 0;
+  background-image: -webkit-linear-gradient(top, #494e55, #383b42);
+  background-image: -moz-linear-gradient(top, #494e55, #383b42);
+  background-image: -o-linear-gradient(top, #494e55, #383b42);
+  background-image: linear-gradient(to bottom, #494e55, #383b42);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.02), 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.02), 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.table-head > tr > th:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 3px;
+}
+
+.table-head > tr > th:last-child {
+  border-top-right-radius: 3px;
+}
+
+.table-body > tr:nth-child(2n) {
+  background: #2e2e2e;
+}
+
+.table-body > tr:hover {
+  background: #3d3d3d;
+}
+
+.table-body > tr:last-child > td {
+  border-bottom-color: black;
+}
+
+.table-body > tr:last-child > td:first-child {
+  border-bottom-left-radius: 3px;
+}
+
+.table-body > tr:last-child > td:last-child {
+  border-bottom-right-radius: 3px;
+}
+
+.table-body > tr > td {
+  padding: 0 11px;
+  border-right: 1px solid #111;
+  border-bottom: 1px solid #111;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.table-body > tr > td:first-child {
+  border-left: 1px solid #111;
+}
+
+.sigbars {
+  color: white;
+  fill: white;
+  font-size: 24pt;
+}
+
+.hover22 {
+  
+  box-shadow: inset 1px 1px 2px rgba(255,255,255,0.3), 
+              inset 3px 15px 45px rgba(0,0,0,0.2),
+              inset -1px -1px 2px rgba(0,0,0,0.5), 
+              inset -3px -15px 45px rgba(255,255,255,0.1);
+  transition: 0.0s ease-in;
+  color: #FFF;
+  box-shadow: inset 1px 1px 2px rgba(255,255,255,0.3), 
+              inset 3px 15px 45px rgba(0,0,0,0.2),
+              inset -1px -1px 2px rgba(0,0,0,0.5), 
+              inset -3px -15px 45px rgba(255,255,255,0.1),
+        1px -1px 4px 4px rgba(225,225,255,1),
+        1px -1px 12px 3px rgba(0,225,255,1),
+        1px -1px 30px 2px rgba(0,0,255,1);
+        transition: 0.0s ease-in;}
+
+
+/*
+<label class="miniswitch">
+  <input type="checkbox">
+    <div></div>
+</label>
+
+*/
+      .miniswitch {
+        margin: 0;
+        cursor: pointer;
+      }
+      .miniswitch input {
+        display: none;
+      }
+      .miniswitch input + div {
+        width: 40px;
+        height: 16px;
+        background: #b3b3b3;
+        border-radius: 4px;
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        transition: all 0.4s ease;
+      }
+      .miniswitch input + div:before {
+        content: "";
+        float: left;
+        width: 24px;
+        height: 24px;
+        background: #fff;
+        pointer-events: none;
+        margin-top: -4px;
+        margin-left: -4px;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.32);
+        border-radius: 4px;
+        transition: all 0.4s ease 0s;
+      }
+      .miniswitch input + div:after {
+        content: "";
+        float: left;
+        width: 2px;
+        height: 8px;
+        background: #cccccc;
+        pointer-events: none;
+        margin-top: 4px;
+        margin-left: -13px;
+        border-radius: 4px;
+        transition: all 0.4s ease 0s;
+      }
+      .miniswitch input:checked + div {
+        background: #276ef1;
+      }
+      .miniswitch input:checked + div:before,
+      .miniswitch input:checked + div:after {
+        -webkit-transform: translate(24px, 0);
+        transform: translate(24px, 0);
+      }
+      .miniswitch:hover input + div {
+        background: #999999;
+      }
+      .miniswitch:hover input + div:after {
+        background: #276ef1;
+      }
+      .miniswitch:hover input:checked + div {
+        background: #174eb6;
+      }
+
+
+
+/*--------------------------------------------------------------
+RANGE SLIDER
+
+<form class="rangeslider">
+  <input type="range" value="0">
+</form>
+--------------------------------------------------------------*/
+.rangeslider {
+  margin: 0 auto;
+  padding: 20px 0;
+  width:90%;
+}
+input[type="range"]{
+  background: rgb(30,30,30);
+  background: -moz-linear-gradient(top, rgba(30,30,30,1) 0%, rgba(47,47,47,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,30,30,1)), color-stop(100%,rgba(47,47,47,1)));
+  background: -webkit-linear-gradient(top, rgba(30,30,30,1) 0%,rgba(47,47,47,1) 100%);
+  background: -o-linear-gradient(top, rgba(30,30,30,1) 0%,rgba(47,47,47,1) 100%);
+  background: -ms-linear-gradient(top, rgba(30,30,30,1) 0%,rgba(47,47,47,1) 100%);
+  background: linear-gradient(to bottom, rgba(30,30,30,1) 0%,rgba(47,47,47,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e1e', endColorstr='#2f2f2f',GradientType=0 );
+  border-bottom:1px solid #4b4b4b;
+  border-top:1px solid #060606;
+  height:10px;
+  width:100%;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+}
+
+.rangeslider input::-webkit-slider-thumb{
+  background: rgb(80,80,80);
+  background: -moz-linear-gradient(top, rgba(80,80,80,1) 0%, rgba(84,84,84,1) 5%, rgba(82,82,82,1) 16%, rgba(61,61,61,1) 95%, rgba(58,58,58,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(80,80,80,1)), color-stop(5%,rgba(84,84,84,1)), color-stop(16%,rgba(82,82,82,1)), color-stop(95%,rgba(61,61,61,1)), color-stop(100%,rgba(58,58,58,1)));
+  background: -webkit-linear-gradient(top, rgba(80,80,80,1) 0%,rgba(84,84,84,1) 5%,rgba(82,82,82,1) 16%,rgba(61,61,61,1) 95%,rgba(58,58,58,1) 100%);
+  background: -o-linear-gradient(top, rgba(80,80,80,1) 0%,rgba(84,84,84,1) 5%,rgba(82,82,82,1) 16%,rgba(61,61,61,1) 95%,rgba(58,58,58,1) 100%);
+  background: -ms-linear-gradient(top, rgba(80,80,80,1) 0%,rgba(84,84,84,1) 5%,rgba(82,82,82,1) 16%,rgba(61,61,61,1) 95%,rgba(58,58,58,1) 100%);
+  background: linear-gradient(to bottom, rgba(80,80,80,1) 0%,rgba(84,84,84,1) 5%,rgba(82,82,82,1) 16%,rgba(61,61,61,1) 95%,rgba(58,58,58,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#505050', endColorstr='#3a3a3a',GradientType=0 );
+  border: 1px solid #1a1a1a;
+  cursor: pointer;
+  height:22px;
+  text-indent: -9999px;
+  width:90px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.2) inset;
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.2) inset;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.2) inset;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  border-radius:10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+}
+  .rangeslider input::-webkit-slider-thumb:hover{
+    background: rgb(83,83,83);
+    background: -moz-linear-gradient(top, rgba(83,83,83,1) 0%, rgba(88,88,88,1) 5%, rgba(86,86,86,1) 16%, rgba(66,66,66,1) 95%, rgba(62,62,62,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(83,83,83,1)), color-stop(5%,rgba(88,88,88,1)), color-stop(16%,rgba(86,86,86,1)), color-stop(95%,rgba(66,66,66,1)), color-stop(100%,rgba(62,62,62,1)));
+    background: -webkit-linear-gradient(top, rgba(83,83,83,1) 0%,rgba(88,88,88,1) 5%,rgba(86,86,86,1) 16%,rgba(66,66,66,1) 95%,rgba(62,62,62,1) 100%);
+    background: -o-linear-gradient(top, rgba(83,83,83,1) 0%,rgba(88,88,88,1) 5%,rgba(86,86,86,1) 16%,rgba(66,66,66,1) 95%,rgba(62,62,62,1) 100%);
+    background: -ms-linear-gradient(top, rgba(83,83,83,1) 0%,rgba(88,88,88,1) 5%,rgba(86,86,86,1) 16%,rgba(66,66,66,1) 95%,rgba(62,62,62,1) 100%);
+    background: linear-gradient(to bottom, rgba(83,83,83,1) 0%,rgba(88,88,88,1) 5%,rgba(86,86,86,1) 16%,rgba(66,66,66,1) 95%,rgba(62,62,62,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#535353', endColorstr='#3e3e3e',GradientType=0 );
+  }
+  .rangeslider input::-webkit-slider-thumb:active {
+    background: rgb(62,62,62);
+    background: -moz-linear-gradient(top, rgba(62,62,62,1) 0%, rgba(66,66,66,1) 5%, rgba(86,86,86,1) 84%, rgba(88,88,88,1) 95%, rgba(83,83,83,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(62,62,62,1)), color-stop(5%,rgba(66,66,66,1)), color-stop(84%,rgba(86,86,86,1)), color-stop(95%,rgba(88,88,88,1)), color-stop(100%,rgba(83,83,83,1)));
+    background: -webkit-linear-gradient(top, rgba(62,62,62,1) 0%,rgba(66,66,66,1) 5%,rgba(86,86,86,1) 84%,rgba(88,88,88,1) 95%,rgba(83,83,83,1) 100%);
+    background: -o-linear-gradient(top, rgba(62,62,62,1) 0%,rgba(66,66,66,1) 5%,rgba(86,86,86,1) 84%,rgba(88,88,88,1) 95%,rgba(83,83,83,1) 100%);
+    background: -ms-linear-gradient(top, rgba(62,62,62,1) 0%,rgba(66,66,66,1) 5%,rgba(86,86,86,1) 84%,rgba(88,88,88,1) 95%,rgba(83,83,83,1) 100%);
+    background: linear-gradient(to bottom, rgba(62,62,62,1) 0%,rgba(66,66,66,1) 5%,rgba(86,86,86,1) 84%,rgba(88,88,88,1) 95%,rgba(83,83,83,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3e3e', endColorstr='#535353',GradientType=0 );
+  }
+/* [/RANGE SLIDER] */
+
+
+
+
+
+/*--------------------------------------------------------------
+CSS SPST Toggle Switch w/Red+Green Status LEDS
+
+  <span class="SPSTswitch">
+  <span class="SPSTswitch-border1">
+    <span class="SPSTswitch-border2">
+      <input id="SPSTswitch1" type="checkbox" checked="">
+      <label for="SPSTswitch1"></label>
+      <span class="SPSTswitch-top"></span>
+      <span class="SPSTswitch-shadow"></span>
+      <span class="SPSTswitch-handle"></span>
+      <span class="SPSTswitch-handle-left"></span>
+      <span class="SPSTswitch-handle-right"></span>
+      <span class="SPSTswitch-handle-top"></span>
+      <span class="SPSTswitch-handle-bottom"></span>
+      <span class="SPSTswitch-handle-base"></span>
+      <span class="SPSTswitch-led SPSTswitch-led-green">
+        <span class="SPSTswitch-led-border">
+          <span class="SPSTswitch-led-light">
+            <span class="SPSTswitch-led-glow"></span>
+          </span>
+        </span>
+      </span>
+      <span class="SPSTswitch-led SPSTswitch-led-red">
+        <span class="SPSTswitch-led-border">
+          <span class="SPSTswitch-led-light">
+            <span class="SPSTswitch-led-glow"></span>
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</span>
+
+<span class="SPSTswitch">
+  <span class="SPSTswitch-border1">
+    <span class="SPSTswitch-border2">
+      <input id="SPSTswitch2" type="checkbox">
+      <label for="SPSTswitch2"></label>
+      <span class="SPSTswitch-top"></span>
+      <span class="SPSTswitch-shadow"></span>
+      <span class="SPSTswitch-handle"></span>
+      <span class="SPSTswitch-handle-left"></span>
+      <span class="SPSTswitch-handle-right"></span>
+      <span class="SPSTswitch-handle-top"></span>
+      <span class="SPSTswitch-handle-bottom"></span>
+      <span class="SPSTswitch-handle-base"></span>
+      <span class="SPSTswitch-led SPSTswitch-led-green">
+        <span class="SPSTswitch-led-border">
+          <span class="SPSTswitch-led-light">
+            <span class="SPSTswitch-led-glow"></span>
+          </span>
+        </span>
+      </span>
+      <span class="SPSTswitch-led SPSTswitch-led-red">
+        <span class="SPSTswitch-led-border">
+          <span class="SPSTswitch-led-light">
+            <span class="SPSTswitch-led-glow"></span>
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</span>
+--------------------------------------------------------------*/
+
+
+.SPSTswitch {
+  display: inline-block;
+/*  margin: 10em 2em; */
+  margin: 0em 0em;
+  position: relative;
+  border-radius: 3.5em;
+  -webkit-box-shadow: 0 0 0.5em rgba(255,255,255,0.2);
+  -moz-box-shadow: 0 0 0.5em rgba(255,255,255,0.2);
+  box-shadow: 0 0 0.5em rgba(255,255,255,0.2);
+}
+
+.SPSTswitch label {
+  width: 100%;
+  height: 100%;
+  right-margin: 10px;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.SPSTswitch input {
+  display: none;
+}
+
+.SPSTswitch span {
+  display: block;
+  -webkit-transition: top 0.2s;
+  -moz-transition: top 0.2s;
+  -ms-transition: top 0.2s;
+  -o-transition: top 0.2s;
+  transition: top 0.2s;
+}
+
+.SPSTswitch-border1 {
+  border: 0.1em solid #000;
+  border-radius: 3.5em;
+  -webkit-box-shadow: 0 0.2em rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: 0 0.2em rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0.2em rgba(255, 255, 255, 0.2);
+}
+
+.SPSTswitch-border2 {
+  width: 6.6em;
+  height: 12.6em;
+  position: relative;
+  border: 0.1em solid #323232;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2D2D2D), color-stop(0.5, #4B4B4B), to(#2D2D2D));
+  background-image: -webkit-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -moz-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -ms-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -o-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: linear-gradient(to right, #2D2D2D, #4B4B4B, #2D2D2D);
+  border-radius: 3.4em;
+}
+
+.SPSTswitch-border2:before,
+.SPSTswitch-border2:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: .3;
+  border-radius: 3.4em;
+}
+
+.SPSTswitch-border2:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(#000, rgba(0,0,0,0));
+  background: -moz-linear-gradient(#000, rgba(0,0,0,0));
+  background: -ms-linear-gradient(#000, rgba(0,0,0,0));
+  background: -o-linear-gradient(#000, rgba(0,0,0,0));
+  background: linear-gradient(#000, rgba(0,0,0,0));
+}
+
+.SPSTswitch-border2:after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(#000));
+  background: -webkit-linear-gradient(rgba(0,0,0,0), #000);
+  background: -moz-linear-gradient(rgba(0,0,0,0), #000);
+  background: -ms-linear-gradient(rgba(0,0,0,0), #000);
+  background: -o-linear-gradient(rgba(0,0,0,0), #000);
+  background: linear-gradient(rgba(0,0,0,0), #000);
+}
+
+.SPSTswitch-top {
+  width: 100%;
+  height: 84%;
+  position: absolute;
+  top: 8%;
+  left: 0;
+  z-index: 1;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2D2D2D), color-stop(0.5, #4B4B4B), to(#2D2D2D));
+  background-image: -webkit-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -moz-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -ms-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -o-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: linear-gradient(to right, #2D2D2D, #4B4B4B, #2D2D2D);
+  border-radius: 3.4em;
+}
+
+.SPSTswitch-shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3.4em;
+  -webkit-box-shadow: 0 0 2em black inset;
+  -moz-box-shadow: 0 0 2em black inset;
+  box-shadow: 0 0 2em black inset;
+}
+
+.SPSTswitch-handle-left,
+.SPSTswitch-handle-right {
+  content: '';
+  display: block;
+  width: 3.6em;
+  height: 0;
+  position: absolute;
+  top: 6.6em;
+  z-index: 2;
+  border-bottom: 4.5em solid #111;
+  border-left: 0.7em solid transparent;
+  border-right: 0.7em solid transparent;
+  border-radius: 0;
+}
+
+.SPSTswitch-handle-left {
+  left: 0.8em;
+}
+
+.SPSTswitch-handle-right {
+  right: 0.8em;
+}
+
+.SPSTswitch-handle {
+  width: 3.6em;
+  height: 4.5em;
+  position: absolute;
+  top: 6.6em;
+  left: 1.5em;
+  z-index: 3;
+  background: #333;
+  background-image: -webkit-gradient(linear, left top, right top, from(#111), color-stop(0.4, #777), color-stop(0.5, #888), color-stop(0.6, #777), to(#111));
+  background-image: -webkit-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -moz-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -ms-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -o-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: linear-gradient(to right, #111, #777 40%, #888, #777 60%, #111);
+  border-radius: 0;
+}
+
+.SPSTswitch-handle-top {
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  top: 8.5em;
+  left: 0.8em;
+  z-index: 4;
+  background-color: #555;
+  background-image: -webkit-gradient(linear, left top, right top, from(#5F5F5F), to(#878787));
+  background-image: -webkit-linear-gradient(left, #5F5F5F, #878787);
+  background-image: -moz-linear-gradient(left, #5F5F5F, #878787);
+  background-image: -ms-linear-gradient(left, #5F5F5F, #878787);
+  background-image: -o-linear-gradient(left, #5F5F5F, #878787);
+  background-image: linear-gradient(to right, #5F5F5F, #878787);
+  border-top: 0.2em solid #AEB2B3;
+  border-radius: 2.5em;
+}
+
+.SPSTswitch-handle-bottom {
+  width: 3.6em;
+  height: 3.6em;
+  position: absolute;
+  top: 4.7em;
+  left: 1.5em;
+  z-index: 3;
+  background: #333;
+  background-image: -webkit-gradient(linear, left top, right top, from(#111), color-stop(0.4, #777), color-stop(0.5, #888), color-stop(0.6, #777), to(#111));
+  background-image: -webkit-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -moz-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -ms-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -o-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: linear-gradient(to right, #111, #777 40%, #888, #777 60%, #111);
+  border-top: 0.2em solid #141414;
+  border-radius: 1.8em;
+}
+
+.SPSTswitch-handle-base {
+  width: 4.2em;
+  height: 4.2em;
+  position: absolute;
+  top: 3.8em;
+  left: 1.2em;
+  z-index: 2;
+  border-top: 0.2em solid rgba(255,255,255,0.35);
+  border-radius: 2.1em;
+  -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,0.8) inset;
+  -moz-box-shadow: 0 0 0.5em rgba(0,0,0,0.8) inset;
+  box-shadow: 0 0 0.5em rgba(0,0,0,0.8) inset;
+}
+
+.SPSTswitch-led {
+  position: absolute;
+  left: 2em;
+  border-radius: 1.4em;
+}
+
+.SPSTswitch-led-border {
+  border: 0.2em solid black;
+  border-radius: 1.3em;
+}
+
+.SPSTswitch-led-light {
+  border-radius: 1.1em;
+  -webkit-box-shadow: 0 0 0.5em rgba(255,255,255,0.5) inset;
+  -moz-box-shadow: 0 0 0.5em rgba(255,255,255,0.5) inset;
+  box-shadow: 0 0 0.5em rgba(255,255,255,0.5) inset;
+}
+
+.SPSTswitch-led-glow {
+  width: 2em;
+  height: 2em;
+  position: relative;
+  border-radius: 1em;
+}
+
+.SPSTswitch-led-glow:before {
+  content: '';
+  display: block;
+  width: 0.6em;
+  height: 0.6em;
+  position: absolute;
+  top: 0.3em;
+  left: 0.7em;
+  background: rgba(255,255,255,0.2);
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 0 1em rgba(255,255,255,0.75);
+  -moz-box-shadow: 0 0 1em rgba(255,255,255,0.75);
+  box-shadow: 0 0 1em rgba(255,255,255,0.75);
+}
+
+.SPSTswitch-led-glow:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  border: 1em solid #fff;
+  border-color: transparent #fff transparent #fff;
+  border-radius: 1em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.SPSTswitch-led:after {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  color: #666;
+  font-family: arial, verdana, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0.1em rgba(0,0,0,0.7);
+}
+
+.SPSTswitch-led-green:after {
+  content: '';
+  top: -1.8em;
+}
+
+.SPSTswitch-led-red:after {
+  content: '';
+  bottom: -1.8em;
+}
+
+
+.SPSTswitch-led-green {
+  top: -5em;
+  border-top: 0.1em solid rgba(0,161,75,0.5);
+  border-bottom: 0.1em solid rgba(255,255,255,0.25);
+}
+
+.SPSTswitch-led-green .SPSTswitch-led-light {
+  background: rgb(0,161,75);
+  border: 0.1em solid rgb(0,104,56);
+}
+
+.SPSTswitch-led-red {
+  bottom: -5em;
+  border-top: 0.1em solid rgba(237,28,36,0.2);
+  border-bottom: 0.1em solid rgba(255,255,255,0.25);
+  -webkit-box-shadow: 0 0 3em rgb(237,28,36);
+  -moz-box-shadow: 0 0 3em rgb(237,28,36);
+  box-shadow: 0 0 3em rgb(237,28,36);
+}
+
+.SPSTswitch-led-red .SPSTswitch-led-light {
+  background: rgb(237,28,36);
+  border: 0.1em solid rgb(161,30,45);
+}
+
+.SPSTswitch-led-red .SPSTswitch-led-glow {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  filter: alpha(opacity=30);
+}
+
+/* SPSTswitch on */
+
+.SPSTswitch input:checked~.SPSTswitch-handle-left, .SPSTswitch input:checked~.SPSTswitch-handle-right {
+  top: 1.5em;
+  border-bottom: 0;
+  border-top: 4.5em solid #111;
+}
+
+.SPSTswitch input:checked~.SPSTswitch-handle {
+  top: 1.5em;
+}
+
+.SPSTswitch input:checked~.SPSTswitch-handle-top  {
+  top: -1em;
+  border-top: 0;
+  border-bottom: 0.2em solid #AEB2B3;
+}
+
+.SPSTswitch input:checked~.SPSTswitch-handle-bottom {
+  top: 4.2em;
+  border-top: 0;
+  border-bottom: 0.2em solid #141414;
+}
+
+.SPSTswitch input:checked~.SPSTswitch-handle-base {
+  top: 4.5em;
+  border-top: 0;
+  border-bottom: 0.2em solid rgba(255,255,255,0.35);
+}
+
+.SPSTswitch input:checked~.SPSTswitch-led-green {
+  -webkit-box-shadow: 0 0 3em rgb(0,161,75);
+  -moz-box-shadow: 0 0 3em rgb(0,161,75);
+  box-shadow: 0 0 3em rgb(0,161,75);
+}
+
+.SPSTswitch input:checked~.SPSTswitch-led-green .SPSTswitch-led-glow {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
+  filter: alpha(opacity=40);
+}
+
+.SPSTswitch input:checked~.SPSTswitch-led-red {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.SPSTswitch input:checked~.SPSTswitch-led-red .SPSTswitch-led-glow {
+  background: rgba(255, 255, 255, 0);
+  filter: alpha(opacity=0);
+
+
+.menuMargin {
+display: unset;
+right-margin: 10px;
+left-margin: 10px;
+}

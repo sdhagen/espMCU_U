@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>%FWVERSION% -- %ESPID% [%IPADDRESS%]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="BreezyCV - GPIO / CV / vCard Template" />
+    <meta name="keywords" content="vcard, resposnive, retina, GPIO, jquery, css3, bootstrap, Material CV, portfolio" />
+    <meta name="author" content="lmpixels" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+          <link rel="stylesheet" type="text/css" href="./css/style.css">
+          <link rel="stylesheet" type="text/css" href="./css/sdh-embedded.css">
+          <link rel="stylesheet" type="text/css" href="./css/statusindicators.css">
+          <link rel="stylesheet" type="text/css" href="./css/cooltipz.css">
+          <link rel="stylesheet" type="text/css" href="./css/js-snackbar.css">
+
+          <script src="./js/highcharts.js"></script>
+          <script src="./js/dark-unica.js"></script>
+          <script src="./js/gauge.min.js"></script>
+          <script src="./js/js-snackbar.js"></script>
+
+        <!--script src="https://code.highcharts.com/themes/dark-unica.js"></script-->
+        <!--script src="https://code.highcharts.com/10.2/highcharts.js"></script-->
+        <!--script src="//cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script-->
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css/cooltipz.css" />-->
+        <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">-->
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+
+  </head>
+
+  <body>
+    <!-- Animated Background -->
+    <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
+    <!-- /Animated Background -->
+
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="preloader-spinner">
+        </div>
+      </div>
+    </div>
+    <!-- /Loading animation -->
+
+    <div class="page">
+      <div class="page-content">
+
+          <header id="site_header" class="header mobile-menu-hide">
+            <div class="header-content">
+              <div class="header-photo">
+                <img src="img/pcb.png" alt="espMCU">
+              </div>
+              <div class="header-titles">
+                <h2>%ESPID%</h2>
+                <h4>%FWVERSION%</h4>
+              </div>
+            </div>
+
+            <ul class="main-menu">
+              <li class="active">
+                <a href="#home" class="nav-anim">
+                  <span class="menu-icon sdh-arduino"></span>
+                  <span class="link-text">Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="#configuration" class="nav-anim">
+                  <span class="menu-icon sdh-gauge2"></span>
+                  <span class="link-text">Configuration</span>
+                </a>
+              </li>
+              <li>
+                <a href="#GPIO" class="nav-anim">
+                  <span class="menu-icon sdh-squarewave"></span>
+                  <span class="link-text">Digital GPIO</span>
+                </a>
+              </li>
+              <li>
+                <a href="#analog" class="nav-anim">
+                  <span class="menu-icon sdh-sinewave"></span>
+                  <span class="link-text">Analog Input</span>
+                </a>
+              </li>
+              <li>
+                <a href="#pwm" class="nav-anim">
+                  <span class="menu-icon sdh-dac"></span>
+                  <span class="link-text">PWM Output</span>
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="nav-anim">
+                  <span class="menu-icon sdh-uno"></span>
+                  <span class="link-text">Miscellaneous</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="social-links">
+              <ul>
+                <li> <a href="/update" aria-label="OTA Update Manager" class="cooltipz--bottom menuMargin"><i class="sdh-code sigbars"></i></a></li>
+                 <li><i class=""></i><br><br></li>
+                <li> <a href="/wifimanager.html"><span id="wifiicon" aria-label="WiFi Setup [Sig.Str.: %WIFIPERCENT%&#37;]" class="cooltipz--bottom"><i class="sdh-bars0 sigbars"></i></span></a></li>
+               <li> <a href="/restart"><span aria-label="Reboot Device..." class="cooltipz--bottom"><i class="sdh-onoff sigbars menuMargin"></i></span></a></li>
+              </ul>
+            </div>
+
+            <div class="copyrights">© 2022 Unorthodox Industries</div>
+          </header>
+
+          <!-- Mobile Navigation -->
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- End Mobile Navigation -->
+
+          <!-- Arrows Nav -->
+          <div class="lmpixels-arrows-nav">
+            <div class="lmpixels-arrow-right"><i class="sdh-right"></i></div>
+            <div class="lmpixels-arrow-left"><i class="sdh-left"></i></div>
+          </div>
+          <!-- End Arrows Nav -->
+
+          <div class="content-area">
+            <div class="animated-sections">
+              <!-- Home Subpage -->
+              <section data-id="home" class="animated-section start-page">
+                <div class="section-content vcentered">
+
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="title-block">
+                          <h2>%ESPID%</h2>
+                          <div class="owl-carousel text-rotation">                                    
+                            <div class="item">
+                              <div class="sp-subtitle">IP: %IPADDRESS%</div>
+                            </div>
+                            <div class="item">
+                              <div class="sp-subtitle">MAC: %MACADDRESS%</div>
+                            </div>
+                            <div class="item">
+                              <div class="sp-subtitle">SSID: %WLANSSID%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+              </section>
+              <!-- End of Home Subpage -->
+
+              <!-- Configuration Subpage -->
+              <section data-id="configuration" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>Device Overview</h2>
+                  </div>
+
+
+                  <div class="row">
+      <!-- Certificate 1 Wide -->
+                    <div class="col-xs-12 col-sm-7">
+                      <div class="certificate-item clearfix">
+
+
+                        <div class="certi-content">
+   <table class="table">
+<thead class="table-head">
+  <tr>
+    <th class="tg-cly1">Device Attribute</th>
+    <th class="tg-cly1">Value/Status</th>
+  </tr>
+</thead>
+<tbody class="table-body">
+  <tr>
+    <td class="tg-cly1">Device Label/ID:</td>
+    <td class="tg-cly1">%ESPID%</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Firmware Revision:</td>
+    <td class="tg-cly1">%FWVERSION%</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">CPU Hardware ID:</td>
+    <td class="tg-cly1">%CHIPID%</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">CPU Frequency:</td>
+    <td class="tg-cly1">%CPUFREQ% mHz</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Flash Chip ID:</td>
+    <td class="tg-cly1">%FLASHID%</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Device MAC Address:</td>
+    <td class="tg-cly1">%MACADDRESS%</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Device IP Address:</td>
+    <td class="tg-cly1">%IPADDRESS%</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Network SSID:</td>
+    <td class="tg-cly1">%WLANSSID%</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">WiFi Signal Strength:</td>
+    <td class="tg-cly1"><span id="tablewifipct">%WIFIPERCENT%</span> &#37;</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Used [Program] Space:</td>
+    <td class="tg-cly1">%SKETCHSZ% kB</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Free [Program] Space:</td>
+    <td class="tg-cly1">%FREESPACE% kB</td>
+  </tr>
+</tbody>
+</table>                        </div>
+                      </div>
+                    </div>
+                    <!-- End of  Certificate 3 Wide -->
+      <!-- Certificate 2 Wide -->
+                    <div class="col-xs-12 col-sm-5">
+                      <div class="certificate-item clearfix">
+
+
+                        <div class="certi-content">
+                    <h4>WiFi Signal Stregnth</h4><br>
+          <canvas id="gauge-humidity"></canvas>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of  Certificate 3 Wide -->
+                    </div>
+
+                  <div class="row">
+
+      <!-- Certificate 3 Wide -->
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="certificate-item clearfix">
+
+
+                        <div class="certi-content">
+  <div id="chart-humidity" class="chart-container"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of  Certificate 3 Wide -->
+                    </div>
+
+                  <!-- Services -->
+
+                </div>
+              </section>
+              <!-- End of About Me Subpage -->
+
+              <!-- GPIO Subpage -->
+              <section data-id="GPIO" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>GPIO</h2>
+                  </div>
+
+
+                  <div class="row">
+                              <!-- Certificate 1 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                           <span class="scale-2x"><h1><i class="sdh-spdt"></i> &#68;&#9312;</h1></span>
+                        </div>
+
+                        <div class="certi-content">
+                          <div class="certi-title">
+                           <input type="checkbox" class="togglesw1 scale80" onchange="toggleCheckbox(this)" id="5">
+                          </div>
+                          <div class="certi-id">
+                             <span class="badge badge-dark badge-pill">GPIO 5&nbsp;<span class="badge badge-info badge-pill">D1</span></span>
+                          </div>
+                          <div class="certi-date"><center>
+                            <span id="5l"><div class="led led-red"></div></span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 1 -->
+            <!-- Certificate 2 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                     <div class="certi-logo">
+                        <span class="scale-2x"><h1><i class="sdh-spdt"></i> &#68;&#9313;</h1></span>
+                     </div>
+                     <div class="certi-content">
+                          <div class="certi-title">
+                           <input type="checkbox" class="togglesw1 scale80" onchange="toggleCheckbox(this)" id="4">
+                          </div>
+                          <div class="certi-id">
+                             <span class="badge badge-dark badge-pill">GPIO 4&nbsp;<span class="badge badge-warning badge-pill">D2</span></span>
+                          </div>
+                          <div class="certi-date"><center>
+                            <span id="4l"><div class="led led-red"></div></span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 2 -->
+
+                               <!-- Certificate 3 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                    <div class="certi-logo">
+                        <span class="scale-2x"><h1><i class="sdh-spdt"></i> &#68;&#9314;</h1></span>
+                     </div>
+                      <div class="certi-content">
+                          <div class="certi-title">
+                           <input type="checkbox" class="togglesw1 scale80" onchange="toggleCheckbox(this)" id="0">
+                          </div>
+                          <div class="certi-id">
+                             <span class="badge badge-dark badge-pill">GPIO 0&nbsp;<span class="badge badge-success badge-pill">D3</span></span>
+                          </div>
+                          <div class="certi-date"><center>
+                            <span id="0l"><div class="led led-red"></div></span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 3 -->
+
+                                <!-- Certificate 4 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                       <div class="certi-logo">
+                           <span class="scale-2x"><h1><i class="sdh-spdt"></i> &#68;&#9315;</h1></span>
+                        </div>
+                        <div class="certi-content">
+                          <div class="certi-title">
+                           <input type="checkbox" class="togglesw1 scale80" onchange="toggleCheckbox(this)" id="2">
+                          </div>
+                          <div class="certi-id">
+                             <span class="badge badge-dark badge-pill">GPIO 2&nbsp;<span class="badge badge-danger badge-pill">D4</span></span>
+                          </div>
+                          <div class="certi-date"><center>
+                            <span id="2l"><div class="led led-red"></div></span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 4 -->
+
+                    <!-- Certificate 5 Wide -->
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+
+                        </div>
+
+                        <div class="certi-content">
+
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of  Certificate 5 Wide -->
+
+
+
+
+
+                </div>
+              </section>
+              <!-- End of GPIO Subpage -->
+
+
+  <!-- Analog Input Subpage -->
+              <section data-id="analog" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>Analog Input</h2>
+                  </div>
+
+                  <div class="row">
+
+                              <!-- Certificate 1 -->
+                    <div class="col-xs-12 col-sm-4">
+                      <div class="certificate-item clearfix">
+
+
+                        <div class="certi-content">
+
+                         <div class="certi-title">
+                            <h4>Analog Input 'A0'</h4>
+                          </div>
+                          <br>
+                                   <canvas id="gauge-temperature"></canvas>
+                                   <table class="table">
+<thead class="table-head">
+  <tr>
+    <th class="tg-cly1">Analog Input 'A0' [%]</th>
+</thead>
+<tbody class="table-body">
+  <tr>
+    <td class="tg-cly1">
+      <center>
+
+     <span id="a0pct" style="color:white;text-align: center;"><h4>__</h4></span></span>
+    </center>
+    </td>
+  </tr>
+</tbody>
+</table>  
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 1 -->
+            <!-- Certificate 2 -->
+                     <div class="col-xs-12 col-sm-8">
+                      <div class="certificate-item clearfix">
+   <div class="certi-content">
+                                                 <div class="certi-title">
+                            <h4>Input 'A0' vs. Time </h4>
+                                        </div>
+                                        <br>
+                                   <div id="chart-temperature" class="chart-container"></div>
+                                                                      <br>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 2 -->
+
+
+      <!-- Certificate 3 Wide -->
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="certificate-item clearfix">
+
+                        <div class="certi-content">
+                                                 <div class="certi-title">
+                            <h4>Input 'A0' vs. Time </h4>
+                                        </div>
+             
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of  Certificate 3 Wide -->
+
+
+              </section>
+              <!-- End of Analog Input Subpage Subpage -->
+
+
+      <!--PWM Subpage -->
+              <section data-id="pwm" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>PWM Output</h2>
+                  </div>
+
+                  <div class="row">
+
+                              <!-- Certificate 1 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+
+
+                        <div class="certi-content">
+
+           <span class="badge badge-secondary"style="color:white;text-align: center;font-size: 18pt;"><span id="textSliderPercent" style="color:white;text-align: center;font-size: 18pt;">0</span>&#37;</span>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 1 -->
+            <!-- Certificate 2 -->
+                     <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+
+                        <div class="certi-content">
+                         <div class="certi-title">
+  <span class="badge badge-dark"style="color:white;text-align: center;font-size: 18pt;"><span id="textSliderValue" style="color:white;text-align: center;font-size: 18pt;">0</span> / 1024</span>
+
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 2 -->
+
+
+      <!-- Certificate 3 Wide -->
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="certificate-item clearfix">
+
+                        <div class="certi-content">
+
+
+<ul class="list-group">
+
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+         <form class="rangeslider">
+             <input type="range" onchange="updateSliderPWM(this)" id="pwmSlider" min="0" max="1023" value="%SLIDERVALUE%" step="1">
+         </form>
+    </li>
+
+</ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of  Certificate 3 Wide -->
+
+
+              </section>
+              <!-- End of PWM Subpage -->
+
+
+
+              <!-- Portfolio Subpage -->
+              <section data-id="portfolio2" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>Portfolio</h2>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <!-- Portfolio Content -->
+                      <div class="portfolio-content">
+
+                        <ul class="portfolio-filters">
+                          <li class="active">
+                            <a class="filter btn btn-sm btn-link" data-group="category_all">All</a>
+                          </li>
+                          <li>
+                            <a class="filter btn btn-sm btn-link" data-group="category_detailed">Detailed</a>
+                          </li>
+                          <li>
+                            <a class="filter btn btn-sm btn-link" data-group="category_mockups">Mockups</a>
+                          </li>
+                          <li>
+                            <a class="filter btn btn-sm btn-link" data-group="category_soundcloud">SoundCloud</a>
+                          </li>
+                          <li>
+                            <a class="filter btn btn-sm btn-link" data-group="category_vimeo-videos">Vimeo Videos</a>
+                          </li>
+                          <li>
+                            <a class="filter btn btn-sm btn-link" data-group="category_youtube-videos">YouTube Videos</a>
+                          </li>
+                        </ul>
+
+                        <!-- Portfolio Grid -->
+                        <div class="portfolio-grid three-columns">
+                          
+                          <figure class="item lbaudio" data-groups='["category_all", "category_soundcloud"]'>
+                            <div class="portfolio-item-img">
+                              <img src="img/portfolio/1.jpg" alt="SoundCloud Audio" title="" />
+                              <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/221650664&#038;color=%23ff5500&#038;auto_play=false&#038;hide_related=false&#038;show_comments=true&#038;show_user=true&#038;show_reposts=false&#038;show_teaser=true&#038;visual=true" class="lightbox mfp-iframe" title="SoundCloud Audio"></a>
+                            </div>
+
+                            <i class="fa fa-volume-up"></i>
+                            <h4 class="name">SoundCloud Audio</h4>
+                            <span class="category">SoundCloud</span>
+                          </figure>
+
+                          <figure class="item standard" data-groups='["category_all", "category_detailed"]'>
+                            <div class="portfolio-item-img">
+                              <img src="img/portfolio/2.jpg" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name">Detailed Project 2</h4>
+                            <span class="category">Detailed</span>
+                          </figure>
+
+                          <figure class="item lbvideo" data-groups='["category_all", "category_vimeo-videos"]'>
+                            <div class="portfolio-item-img">
+                              <img src="img/portfolio/3.jpg" alt="Vimeo Video 1" title="" />
+                              <a href="https://player.vimeo.com/video/158284739" class="lightbox mfp-iframe" title="Vimeo Video 1"></a>
+                            </div>
+
+                            <i class="fas fa-video"></i>
+                            <h4 class="name">Vimeo Video 1</h4>
+                            <span class="category">Vimeo Videos</span>
+                          </figure>
+
+                          <figure class="item standard" data-groups='["category_all", "category_detailed"]'>
+                            <div class="portfolio-item-img">
+                              <img src="img/portfolio/4.jpg" alt="Media Project 1" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name">Detailed Project 1</h4>
+                            <span class="category">Detailed</span>
+                          </figure>
+
+                          <figure class="item lbimage" data-groups='["category_all", "category_mockups"]'>
+                            <div class="portfolio-item-img">
+                              <img src="img/portfolio/5.jpg" alt="Mockup Design 1" title="" />
+                              <a class="lightbox" title="Mockup Design 1" href="img/portfolio/full/5.jpg"></a>
+                            </div>
+
+                            <i class="far fa-image"></i>
+                            <h4 class="name">Mockup Design 1</h4>
+                            <span class="category">Mockups</span>
+                          </figure>
+
+                          <figure class="item lbvideo" data-groups='["category_all", "category_youtube-videos"]'>
+                            <div class="portfolio-item-img">
+                              <img src="img/portfolio/6.jpg" alt="YouTube Video 1" title="" />
+                              <a href="https://www.youtube.com/embed/bg0gv2YpIok" class="lightbox mfp-iframe" title="YouTube Video 1"></a>
+                            </div>
+
+                            <i class="fas fa-video"></i>
+                            <h4 class="name">YouTube Video 1</h4>
+                            <span class="category">YouTube Videos</span>
+                          </figure>
+                        </div>
+                      </div>
+                      <!-- End of Portfolio Content -->
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- End of Portfolio Subpage -->
+
+              <!-- Blog Subpage -->
+              <section data-id="blog" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>Blog</h2>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="blog-masonry two-columns clearfix">
+                        
+                        <!-- Blog Post 1 -->
+                        <div class="item post-1">
+                          <div class="blog-card">
+                            <div class="media-block">
+                              <div class="category">
+                                <a href="#" title="View all posts in Design">Design</a>
+                              </div>
+                              <a href="blog-post-1.html">
+                                <img src="img/blog/blog_post_1.jpg" class="size-blog-masonry-image-two-c" alt="Why I Switched to Sketch For UI Design" title="" />
+                                <div class="mask"></div>
+                              </a>
+                            </div>
+                            <div class="post-info">
+                              <div class="post-date">05 Mar 2020</div>
+                              <a href="blog-post-1.html">
+                                <h4 class="blog-item-title">Why I Switched to Sketch For UI Design</h4>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of Blog Post 1 -->
+
+                        <!-- Blog Post 2 -->
+                        <div class="item post-2">
+                          <div class="blog-card">
+                            <div class="media-block">
+                              <div class="category">
+                                <a href="#" title="View all posts in UI">UI</a>
+                              </div>
+                              <a href="blog-post-1.html">
+                                <img src="img/blog/blog_post_2.jpg" class="size-blog-masonry-image-two-c" alt="Best Practices for Animated Progress Indicators" title="" />
+                                <div class="mask"></div>
+                              </a>
+                            </div>
+                            <div class="post-info">
+                              <div class="post-date">23 Feb 2020</div>
+                              <a href="blog-post-1.html">
+                                <h4 class="blog-item-title">Best Practices for Animated Progress Indicators</h4>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of Blog Post 2 -->
+
+                        <!-- Blog Post 3 -->
+                        <div class="item post-1">
+                          <div class="blog-card">
+                            <div class="media-block">
+                              <div class="category">
+                                <a href="#" title="View all posts in Design">Design</a>
+                              </div>
+                              <a href="blog-post-1.html">
+                                <img src="img/blog/blog_post_3.jpg" class="size-blog-masonry-image-two-c" alt="Designing the Perfect Feature Comparison Table" title="" />
+                                <div class="mask"></div>
+                              </a>
+                            </div>
+                            <div class="post-info">
+                              <div class="post-date">06 Feb 2020</div>
+                              <a href="blog-post-1.html">
+                                <h4 class="blog-item-title">Designing the Perfect Feature Comparison Table</h4>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of Blog Post 3 -->
+
+                        <!-- Blog Post 4 -->
+                        <div class="item post-2">
+                          <div class="blog-card">
+                            <div class="media-block">
+                              <div class="category">
+                                <a href="#" title="View all posts in E-Commerce">UI</a>
+                              </div>
+                              <a href="blog-post-1.html">
+                                <img src="img/blog/blog_post_4.jpg" class="size-blog-masonry-image-two-c" alt="An Overview of E-Commerce Platforms" title="" />
+                                <div class="mask"></div>
+                              </a>
+                            </div>
+                            <div class="post-info">
+                              <div class="post-date">07 Jan 2020</div>
+                              <a href="blog-post-1.html">
+                                <h4 class="blog-item-title">An Overview of E-Commerce Platforms</h4>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of Blog Post 4 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </section>
+              <!-- End of Blog Subpage -->
+
+              <!-- Contact Subpage -->
+              <section data-id="contact" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>Miscellaneous</h2>
+                  </div>
+
+               
+    
+                    <div class="col-xs-12 col-sm-12"><!-- 5 Wide -->                     
+                     <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                    
+                      <div class="lm-info-block gray-default">
+                    <table class="table">
+                    <thead class="table-head">
+                      <tr>
+                        <th class="tg-cly1">D #</th>
+                        <th class="tg-cly1">GPIO #</th>
+                        <th class="tg-cly1">Function</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-body">
+                     <tr>
+                     <td>A0</td>
+                     <td>ADC</td>
+                     <td>8-Bit Analog Input</td>
+                     </tr>
+                    <tr>
+                    <td>D0</td>
+                    <td>GPIO 16</td>
+                    <td>Factory Reset</td>
+                    </tr>
+                    <tr>
+                    <td>D1</td>
+                    <td>GPIO 5</td>
+                    <td>Digital Output</td>
+                    </tr>
+                    <tr>
+                    <td>D2</td>
+                    <td>GPIO 4</td>
+                    <td>Digital Output</td>
+                    </tr>
+                    <tr>
+                    <td>D3</td>
+                    <td>GPIO 0</td>
+                    <td>Digital Output</td>
+                    </tr>
+                    <tr>
+                    <td>D4</td>
+                    <td>GPIO 2</td>
+                    <td>Digital Output</td>
+                    </tr>
+                    <tr>
+                    <td>D5</td>
+                    <td>GPIO 14</td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>D6</td>
+                    <td>GPIO 12</td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>D7</td>
+                    <td>GPIO 13</td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>D8</td>
+                    <td>GPIO 15</td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>RX</td>
+                    <td>GPIO 3</td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>TX</td>
+                    <td>GPIO 1</td>
+                    <td></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </div>                       
+                   </div>
+                    
+                        <div class="certi-content">
+                               <img src="./img/pinout.png" />
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <!-- END 5 Wide -->
+                    
+                    
+                    <div class="col-xs-12 col-sm-12"><!-- BEGIN Wide Box -->
+                      <div class="certificate-item clearfix">
+                        <div class="certi-content">
+                           <div class="lm-info-block gray-default">
+                             __
+                           </div>
+                           <div class="lm-info-block gray-default">
+                              __
+                            </div>
+                        </div>
+                      </div>       
+                    </div> <!-- END Wide Box -->
+
+
+                  <div class="row"><!-- BEGIN Row -->     
+                                 
+                    <div class="col-xs-12 col-sm-6"><!-- BEGIN Box -->
+                      <div class="certificate-item clearfix">
+                        <div class="certi-content">
+                           <div class="lm-info-block gray-default">
+                             __
+                           </div>
+                           <div class="lm-info-block gray-default">
+                              __
+                            </div>
+                        </div>
+                      </div>       
+                    </div> <!-- END Box -->
+                    
+                    <div class="col-xs-12 col-sm-6"><!-- BEGIN Box -->
+                      <div class="certificate-item clearfix">
+                        <div class="certi-content">
+                           <div class="lm-info-block gray-default">
+                             __
+                           </div>
+                           <div class="lm-info-block gray-default">
+                              __
+                            </div>
+                        </div>
+                      </div>       
+                    </div> <!-- END Box -->
+
+                  </div><!-- END Row -->  
+
+
+                </div>
+              </section>
+              <!-- End of Misc Subpage -->
+              
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/animating.js"></script>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src='js/perfect-scrollbar.min.js'></script>
+    <script src='js/jquery.shuffle.min.js'></script>
+    <script src='js/masonry.pkgd.min.js'></script>
+    <script src='js/owl.carousel.min.js'></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
+    <script src="js/jquery.googlemap.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="./js/script.js"></script>
+
+  </body>
+</html>
